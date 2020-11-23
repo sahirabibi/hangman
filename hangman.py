@@ -1,6 +1,7 @@
 # hangman game 
 
-word_list = ['cat', 'bat', 'hat', 'display', 'network', 'rotate', 'dictionary']
+word_list = ['cat', 'bat', 'hat', 'display', 
+            'network', 'rotate', 'dictionary''python']
 
 
 def select_word(word_list):
