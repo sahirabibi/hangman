@@ -13,7 +13,6 @@ def hangman(word_list):
     word = list(w) 
     results = collections.Counter(word)   
     print('The game has begun! Hidden word has', len(word), 'letters in it.')
-    print(word)
 # game play
     guesses = []
     correct_needed = len(word)
