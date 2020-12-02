@@ -25,19 +25,23 @@ repeats = []
 def play_game():
     # ask for a letter
     print("Currently guessed letters:", guesses)
-    choice = input('Guess a letter... to quit, press the spacebar')
+    choice = input('Guess a letter... to quit, press the spacebar\n')
     if choice == ' ':
         end_game()
     else:
-        if choice in guesses:
-            repeat_guess(choice)
+        if len(choice) > 1: 
+            print('Only input one letter at a time.')
+            play_game()
         else:
-            if choice not in word:
-                wrong_guess(choice)
+            if choice in guesses:
+                repeat_guess(choice)
             else:
-                correct_guess(choice)
+                if choice not in word:
+                    wrong_guess(choice)
+                else:
+                    correct_guess(choice)
 
-
+                           
 def correct_guess(choice):
     print('Correct', choice, 'is in the hidden word.')
     print(choice, 'appears', results[choice], 'times.')
